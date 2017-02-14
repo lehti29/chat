@@ -662,10 +662,10 @@ public class ChatClient
         System.out.println("myName: " + myName);
         mainFrame = new JFrame("@Chat room");
         mainFrame.setSize(400,400);
-        mainFrame.setLayout(new GridLayout(3, 3));
+        mainFrame.setLayout(new GridLayout(3, 1));
 
-        headerLabel = new JLabel("",JLabel.CENTER );
-        statusLabel = new JLabel("",JLabel.CENTER);
+        //headerLabel = new JLabel("",JLabel.CENTER );
+        //statusLabel = new JLabel("",JLabel.CENTER);
         messagesLabel = new JLabel("",JLabel.CENTER);
         messagesLabel.setBackground(Color.lightGray);
         messagesLabel.setOpaque(true);
@@ -673,24 +673,24 @@ public class ChatClient
         msgTextArea = new JTextArea("", 5, 10);
         sendButton = new JButton("Send message bro");
 
-        scrollPane = new JScrollPane(msgTextArea);
+        //scrollPane = new JScrollPane(msgTextArea);
 
-        statusLabel.setSize(350,100);
-        controlPanel = new JPanel();
-        controlPanel.setLayout(new FlowLayout());
+        //statusLabel.setSize(350,100);
+        //controlPanel = new JPanel();
+        //controlPanel.setLayout(new FlowLayout());
 
         mainFrame.add(messagesLabel);
         mainFrame.add(msgTextArea);
         mainFrame.add(sendButton);
-        mainFrame.add(headerLabel);
-        mainFrame.add(controlPanel);
-        mainFrame.add(statusLabel);
+        //mainFrame.add(headerLabel);
+        //mainFrame.add(controlPanel);
+        //mainFrame.add(statusLabel);
 
-        controlPanel.add(scrollPane);
+        //controlPanel.add(scrollPane);
 
 
         mainFrame.setVisible(true);
-        controlPanel.setVisible(true);
+        //controlPanel.setVisible(true);
 
         writeMSG();
     }
@@ -700,10 +700,11 @@ public class ChatClient
             sendButtonPressed = true;
             playSound(1);
             handleNewMsg(msgTextArea.getText());
+            msgTextArea.setText("");
         });
         System.out.println("after");
         mainFrame.setVisible(true);
-        controlPanel.setVisible(true);
+        //controlPanel.setVisible(true);
     }
     void handleNewMsg(String buf){
         //sendToChat (myName + ": " + msg);
