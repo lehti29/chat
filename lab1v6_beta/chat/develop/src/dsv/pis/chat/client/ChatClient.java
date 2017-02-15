@@ -37,6 +37,7 @@ import dsv.pis.chat.client.ChatAFK;
 
 import javax.sound.sampled.*;
 import javax.swing.*;
+import javax.swing.text.DefaultCaret;
 
 /**
  * This class implements the ChatClient application.
@@ -674,6 +675,8 @@ public class ChatClient
         scrollPane = new JScrollPane(showMsgTextArea);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+        DefaultCaret caret = (DefaultCaret)showMsgTextArea.getCaret();
+        caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 
         msgTextArea = new JTextArea("", 5, 10);
         sendButton = new JButton("Send");
@@ -682,7 +685,7 @@ public class ChatClient
         controlPanel = new JPanel();
         controlPanel.setLayout(new FlowLayout());
 
-        mainFrame.add(showMsgTextArea);
+        //mainFrame.add(showMsgTextArea);
         mainFrame.add(scrollPane);
         mainFrame.add(msgTextArea);
         mainFrame.add(sendButton);
@@ -791,6 +794,7 @@ public class ChatClient
         String current2 = formatString(showMsgTextArea.getText());
         //showMsgTextArea.setText("<html>" + current2 + "<br>" + msg + "</html>");
         showMsgTextArea.append(msg + "\n");
+
     }
     //Substring away the html parts
     public static String formatString(String str){
