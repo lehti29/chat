@@ -650,61 +650,57 @@ public class ChatClient
 
     private JPanel controlPanel;
 
-    public static JLabel messagesLabel;
+    //public static JLabel messagesLabel;
     public static JButton sendButton;
+    public static JTextArea showMsgTextArea;
 
     public JTextArea msgTextArea;
     public static boolean sendButtonPressed = false;
 
-    public static JScrollPane scrollPane;
+    public JScrollPane scrollPane;
     public void init(){
-        System.out.println("Inne i chatgui!!!!");
         System.out.println("myName: " + myName);
         mainFrame = new JFrame("@Chat room");
-        mainFrame.setSize(400,400);
-        mainFrame.setLayout(new GridLayout(3, 1));
+        mainFrame.setSize(500,500);
+        mainFrame.setLayout(new GridLayout(5, 5));
+        mainFrame.setResizable(false);
 
-        //headerLabel = new JLabel("",JLabel.CENTER );
-        //statusLabel = new JLabel("",JLabel.CENTER);
-        messagesLabel = new JLabel("",JLabel.CENTER);
-        messagesLabel.setBackground(Color.lightGray);
-        messagesLabel.setOpaque(true);
+        showMsgTextArea = new JTextArea("", 5, 10);
+        showMsgTextArea.setBackground(Color.lightGray);
+        showMsgTextArea.setOpaque(true);
+        showMsgTextArea.setLineWrap(true);
+        showMsgTextArea.setEditable(false);
+
+        scrollPane = new JScrollPane(showMsgTextArea);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 
         msgTextArea = new JTextArea("", 5, 10);
-        sendButton = new JButton("Send message bro");
-
-        //scrollPane = new JScrollPane(msgTextArea);
+        sendButton = new JButton("Send");
 
         //statusLabel.setSize(350,100);
-        //controlPanel = new JPanel();
-        //controlPanel.setLayout(new FlowLayout());
+        controlPanel = new JPanel();
+        controlPanel.setLayout(new FlowLayout());
 
-        mainFrame.add(messagesLabel);
+        mainFrame.add(showMsgTextArea);
+        mainFrame.add(scrollPane);
         mainFrame.add(msgTextArea);
         mainFrame.add(sendButton);
-        //mainFrame.add(headerLabel);
-        //mainFrame.add(controlPanel);
-        //mainFrame.add(statusLabel);
 
-        //controlPanel.add(scrollPane);
-
-
+        controlPanel.setVisible(true);
         mainFrame.setVisible(true);
-        //controlPanel.setVisible(true);
-
         writeMSG();
     }
     void writeMSG(){
-        System.out.println("before");
         sendButton.addActionListener(e -> {
             sendButtonPressed = true;
             playSound(1);
             handleNewMsg(msgTextArea.getText());
             msgTextArea.setText("");
         });
-        System.out.println("after");
-        mainFrame.setVisible(true);
         //controlPanel.setVisible(true);
+        //mainFrame.setVisible(true);
+
     }
     void handleNewMsg(String buf){
         //sendToChat (myName + ": " + msg);
@@ -792,8 +788,9 @@ public class ChatClient
     }
     //add a message to the label. Add linebreak between every msg
     static void addMSG(String msg){
-        String current2 = formatString(messagesLabel.getText());
-        messagesLabel.setText("<html>" + current2 + "<br>" + msg + "</html>");
+        String current2 = formatString(showMsgTextArea.getText());
+        //showMsgTextArea.setText("<html>" + current2 + "<br>" + msg + "</html>");
+        showMsgTextArea.append(msg + "\n");
     }
     //Substring away the html parts
     public static String formatString(String str){
