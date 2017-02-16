@@ -454,7 +454,7 @@ public class ChatClient
             "connect <string>  Connect to a server with a matching string",
             "disconnect        Break the connection to the server",
             "quit              Exit the client",
-            "help              2"
+            "help              Show this list"
     };
 
     /**
@@ -534,8 +534,9 @@ public class ChatClient
             }
 
             // Trim away leading and trailing space from the raw input.
-
-            String arg = buf.trim ();
+            //HERE CALL FUNCTION
+            handleNewMsg(buf);
+            /*String arg = buf.trim ();
 
             // Check if the input starts with a period.
 
@@ -612,7 +613,7 @@ public class ChatClient
                     System.out.println ("[Client is not connected!]");
                 }
 
-            }
+            }*/
         } // while not halted
 
         System.out.println ("[Quitting, please wait...]");
@@ -786,6 +787,7 @@ public class ChatClient
 
         }
     }
+    
     String getNewMsg(){
         return msgTextArea.getText();
     }
