@@ -750,7 +750,14 @@ public class ChatClient
 
             if ("quit".startsWith (verb)) {
                 System.out.println("quit");
-                //halted = true;
+                showMsgTextArea.setText(""); //Want to delete old messages of course
+                System.out.println ("[Quitting, please wait...]");
+                disconnect (myServer);
+
+                // Shut down the service discovery manager.
+
+                sdm.terminate ();
+
             }
             else if ("connect".startsWith (verb)) {
                 connectToChat (stringJoin (argv, 1, " "));
@@ -787,7 +794,7 @@ public class ChatClient
 
         }
     }
-    
+
     String getNewMsg(){
         return msgTextArea.getText();
     }

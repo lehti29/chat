@@ -3,12 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="0f9bd6de-922d-428f-8a6b-6d3af6d43c42" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/build/dsv/pis/chat/client/ChatClient.class" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/build/dsv/pis/chat/client/ChatClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/build/dsv/pis/chat/server/ChatServer$IDListener.class" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/build/dsv/pis/chat/server/ChatServer$IDListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/build/dsv/pis/chat/server/ChatServer.class" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/build/dsv/pis/chat/server/ChatServer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatClient-dl.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatClient-dl.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatClient.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatClient.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatServer-dl.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatServer-dl.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatServer.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatServer.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/client/ChatClient-dl.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/client/ChatClient-dl.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/client/ChatClient.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/client/ChatClient.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/server/ChatServer-dl.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/server/ChatServer-dl.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/server/ChatServer.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/server/ChatServer.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatClient.java" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServer.java" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/test/bin/unix/httpd.cfg" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/test/bin/unix/httpd.cfg" />
     </list>
     <ignored path="chat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,24 +47,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatClient.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChatClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9453">
-              <caret line="789" column="4" selection-start-line="789" selection-start-column="4" selection-end-line="789" selection-end-column="4" />
+            <state relative-caret-position="558">
+              <caret line="378" column="17" selection-start-line="378" selection-start-column="17" selection-end-line="378" selection-end-column="17" />
               <folding>
-                <element signature="e#0#28803#0" expanded="true" />
+                <element signature="e#0#29054#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatServer.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChatServer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2223">
-              <caret line="197" column="10" selection-start-line="197" selection-start-column="10" selection-end-line="197" selection-end-column="10" />
+            <state relative-caret-position="405">
+              <caret line="106" column="38" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -131,11 +139,11 @@
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/chatgui/ChatGUI.java" />
-        <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServer.java" />
         <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatAFK.java" />
         <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/build.xml" />
         <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatGUI.java" />
         <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatClient.java" />
+        <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServer.java" />
       </list>
     </option>
   </component>
@@ -953,12 +961,12 @@
       <workItem from="1485086781312" duration="35511000" />
       <workItem from="1485266267931" duration="2353000" />
       <workItem from="1486765112936" duration="749000" />
-      <workItem from="1487090852610" duration="10064000" />
+      <workItem from="1487090852610" duration="12047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48750000" />
+    <option name="totallyTimeSpent" value="50733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="480" y="22" width="1440" height="1002" extended-state="0" />
@@ -1030,7 +1038,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#28803#0" expanded="true" />
+            <element signature="e#0#29054#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1080,7 +1088,7 @@
         <state relative-caret-position="2610">
           <caret line="205" column="23" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
           <folding>
-            <element signature="e#0#28803#0" expanded="true" />
+            <element signature="e#0#29054#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1130,7 +1138,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#28803#0" expanded="true" />
+            <element signature="e#0#29054#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1196,7 +1204,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#28803#0" expanded="true" />
+            <element signature="e#0#29054#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1306,14 +1314,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2223">
-          <caret line="197" column="10" selection-start-line="197" selection-start-column="10" selection-end-line="197" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab1v6_beta/lab1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1324,12 +1324,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9453">
-          <caret line="789" column="4" selection-start-line="789" selection-start-column="4" selection-end-line="789" selection-end-column="4" />
+        <state relative-caret-position="558">
+          <caret line="378" column="17" selection-start-line="378" selection-start-column="17" selection-end-line="378" selection-end-column="17" />
           <folding>
-            <element signature="e#0#28803#0" expanded="true" />
+            <element signature="e#0#29054#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="106" column="38" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
