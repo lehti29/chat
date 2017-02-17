@@ -23,7 +23,7 @@ public interface ChatServerInterface
    * distributed to registered ChatClientNotificationInterfaces.
    * @param msg The message.
    */
-  public void say (String msg)
+  public int say (String msg)
     throws java.rmi.RemoteException;
 
   /**
@@ -31,6 +31,13 @@ public interface ChatServerInterface
    * @return The server's user-friendly name.
    */
   public String getName () throws java.rmi.RemoteException;
+
+  /**
+   * Returns the message count
+   * @return
+   * @throws java.rmi.RemoteException
+   */
+  public int getMsgCount () throws java.rmi.RemoteException;
 
   /**
    * Used by ChatClient instances to register themselves as receivers of

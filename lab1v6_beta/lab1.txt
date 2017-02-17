@@ -18,10 +18,10 @@ Optional tasks for the chat-programs.
 * Prevent the client from displaying the text it has sent. Consider
   that the return of the text is a kind of a reciept for that the
   server actually delivered the text. Filtering can be done on the
-  client or on the server, or indeed on both.
+  client or on the server, or indeed on both. DONE
 
 * Make the service have a globally unique name, even when it is
-  started without the name (-n <name>) option.
+  started without the name (-n <name>) option. DONE
 
 * Add to the client the option to provide a sender name on the
   commandline.

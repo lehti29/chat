@@ -100,6 +100,9 @@ public class ChatClient
     protected static final String versionString = "fk-4.3.26.2";
 
     //public static ChatGUI cg;
+
+    protected int myLastMsg = 0;
+    protected boolean showMine = false;
     /**
      * Creates a new ChatClient instance.
      */
@@ -203,9 +206,16 @@ public class ChatClient
     {
         if (rev instanceof ChatNotification) {
             ChatNotification chat = (ChatNotification) rev;
-            System.out.println (chat.getSequenceNumber () + " : " + chat.getText ());
-            playSound(2);
-            addMSG(chat.getSequenceNumber() + " : " + chat.getText());
+            if(chat.getSequenceNumber() != myLastMsg) { //Not mine, always show
+                System.out.println (chat.getSequenceNumber () + " : " + chat.getText ());
+                playSound(2);
+                addMSG(chat.getSequenceNumber() + " : " + chat.getText());
+            }
+            else if(chat.getSequenceNumber() == myLastMsg && (showMine)){
+                System.out.println (chat.getSequenceNumber () + " : " + chat.getText ());
+                playSound(2);
+                addMSG(chat.getSequenceNumber() + " : " + chat.getText());
+            }
         }
     }
 
@@ -375,9 +385,8 @@ public class ChatClient
      */
     public void sendToChat(String text) {
         if (myServer != null) {
-            //System.out.println("inside sendtochat: " + text);
             try {
-                myServer.say (text);
+                myLastMsg = myServer.say (text);
             }
             catch (java.rmi.RemoteException rex) {
                 System.out.println ("[Sending to server failed]");
@@ -454,7 +463,8 @@ public class ChatClient
             "connect <string>  Connect to a server with a matching string",
             "disconnect        Break the connection to the server",
             "quit              Exit the client",
-            "help              Show this list"
+            "help              Show this list",
+            "showmine           Determines wether your own messages should be displayed or not. Def: false"
     };
 
     /**
@@ -498,13 +508,7 @@ public class ChatClient
      * parsed and dispatched methods that either alter the client or sends
      * the text to the ChatServer (when connected).
      */
-    /*
-    public void sendToReadLoop(String msg){
-        msgFromGUI = msg;
-        //halted = false;
-        System.out.println("insendtoreadloop: " + myName + ": " + msgFromGUI);
-        sendToChat(myName + ": " + msgFromGUI);
-    }*/
+
 
     public void readLoop () throws IOException, ClassNotFoundException {
         boolean halted = false;
@@ -776,6 +780,10 @@ public class ChatClient
             }
             else if ("help".startsWith (verb)) {
                 showHelp (argv);
+            }
+            else if ("showmine".startsWith (verb)) {
+                showMine = !showMine;
+                System.out.println("Showmine now: " + showMine);
             }
             else {
                 System.out.println ("[" + verb + ": unknown command]");

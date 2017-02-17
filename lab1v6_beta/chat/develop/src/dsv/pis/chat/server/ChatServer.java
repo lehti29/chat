@@ -104,9 +104,8 @@ public class ChatServer
         // Find out our hostname so that clients can see it in the registration.
 
         String host = InetAddress.getLocalHost ().getHostName ().toLowerCase ();
-        UUID uuid = UUID.randomUUID();
         serverName =
-                "ChatServer " + ((idName != null) ? idName : uuid.toString()) + " on " + host;
+                "ChatServer " + ((idName != null) ? idName : UUID.randomUUID().toString()) + " on " + host;
 
         // Compose the arguments for the registration attempt with the
         // Jini lookup server.
@@ -146,12 +145,13 @@ public class ChatServer
      * we have unperturbed access to the modification of the message queue.
      * @param msg  The text message to add.
      */
-    protected synchronized void addMessage (String msg) {
+    protected synchronized int addMessage (String msg) {
         msgQueue.addLast (msg);
         msgCount++;
         System.out.println ("MSG#" + msgCount + ":" + msg);
         // Wake up the distribution thread.
         wakeUp ();
+        return msgCount;
     }
 
     /**
@@ -193,17 +193,22 @@ public class ChatServer
 
     // In interface ChatServerInterface
 
-    public void say (String msg) throws java.rmi.RemoteException
+    public int say (String msg) throws java.rmi.RemoteException
     {
         if (msg != null) {
-            addMessage (msg);
+            return addMessage (msg);
         }
+        return -1;
     }
 
     // In interface ChatServerInterface
 
     public String getName () throws java.rmi.RemoteException {
         return serverName;
+    }
+
+    public int getMsgCount() throws  java.rmi.RemoteException{
+        return msgCount;
     }
 
     // In interface ChatServerInterface
