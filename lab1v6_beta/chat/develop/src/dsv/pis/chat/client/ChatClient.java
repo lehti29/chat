@@ -15,6 +15,7 @@ import java.lang.*;
 import java.rmi.*;
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.Random;
 import java.util.Vector;
 
 
@@ -302,6 +303,18 @@ public class ChatClient
                             serverName = ((Name) e).name;
                             break;
                         }
+                    }
+                }
+                else if(serverNamePattern.equals("autoConnect")){
+                    System.out.println("inside autoconnect");
+                    Random random = new Random();
+                    int r = random.nextInt(sit.attributeSets.length);
+                    Entry e = sit.attributeSets[r];
+                    // Is it a Name attribute?
+                    if (e instanceof Name) {
+                        serverName = ((Name) e).name;
+                        accept = true;
+                        break;
                     }
                 }
                 else {
@@ -646,6 +659,7 @@ public class ChatClient
 
         ChatClient cc = new ChatClient ();
         cc.init();
+        cc.connectToChat("autoConnect");
         cc.readLoop ();
     }
 
