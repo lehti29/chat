@@ -74,7 +74,7 @@
                    **/MyRemoteEventListener.class,\
                    **/ChatNotification.class,\
                    **/ChatServerInterface.class,\
-                   **/ChatAFK.class,\
+                   **/ChatClient$$afkNotify.class,\
                    **/ChatGUI.class"> <!--NEW-->
     </jar>
     <jar basedir="${dir.build}" compress="true"
@@ -89,7 +89,6 @@
                    **/ChatServer_Stub.class,\
                    **/ChatServer_Skel.class,\
                    **/ChatGUI.class,\
-                   **/ChatAFK.class,\
                    **/ChatNotification.class,\
                    **/MyRemoteEventListener.class,\
                    **/ChatServerInterface.class,\
@@ -100,8 +99,7 @@
          includes="**/ChatServer_Stub.class,\
                    **/ChatServer_Skel.class,\
                    **/ChatServerInterface.class,\
-                   **/ChatGUI.class,\
-                   **/ChatAFK.class">
+                   **/ChatGUI.class">
     </jar>
   </target>
 

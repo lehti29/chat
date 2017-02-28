@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f9bd6de-922d-428f-8a6b-6d3af6d43c42" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/build/dsv/pis/chat/client/ChatAFK.class" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/build/dsv/pis/chat/client/ChatAFK.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/build/dsv/pis/chat/client/ChatClient.class" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/build/dsv/pis/chat/client/ChatClient.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatClient-dl.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatClient-dl.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatClient.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatClient.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatServer-dl.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatServer-dl.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatServer.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/dist/ChatServer.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/client/ChatClient-dl.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/client/ChatClient-dl.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/client/ChatClient.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/client/ChatClient.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/server/ChatServer-dl.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/server/ChatServer-dl.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/server/ChatServer.jar" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/test/cbs/server/ChatServer.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/build.xml" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatAFK.java" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatAFK.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatClient.java" afterPath="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatClient.java" />
     </list>
     <ignored path="chat.iws" />
@@ -32,30 +39,54 @@
       <file leaf-file-name="lab1.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab1v6_beta/lab1.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+            <state relative-caret-position="-235">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatClient.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChatClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8786">
-              <caret line="661" column="40" selection-start-line="661" selection-start-column="40" selection-end-line="661" selection-end-column="40" />
+            <state relative-caret-position="405">
+              <caret line="141" column="31" selection-start-line="141" selection-start-column="31" selection-end-line="141" selection-end-column="31" />
               <folding>
-                <element signature="e#0#30129#0" expanded="true" />
+                <element signature="e#0#32015#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#4190#4191#0" expanded="true" />
+                <element signature="e#4223#4224#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatAFK.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatAFK.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+              <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatServer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="948">
+            <state relative-caret-position="2580">
               <caret line="200" column="18" selection-start-line="200" selection-start-column="18" selection-end-line="200" selection-end-column="18" />
               <folding />
             </state>
@@ -75,9 +106,12 @@
       <file leaf-file-name="ChatServerInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServerInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="540">
               <caret line="42" column="58" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
-              <folding />
+              <folding>
+                <element signature="e#0#1731#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,12 +138,12 @@
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/chatgui/ChatGUI.java" />
-        <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatAFK.java" />
-        <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/build.xml" />
         <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatGUI.java" />
         <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServer.java" />
         <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServerInterface.java" />
         <option value="$PROJECT_DIR$/lab1v6_beta/lab1.txt" />
+        <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatAFK.java" />
+        <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/build.xml" />
         <option value="$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatClient.java" />
       </list>
     </option>
@@ -125,9 +159,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="524" />
     <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="830" />
+    <option name="width" value="1396" />
+    <option name="height" value="1002" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -272,6 +307,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -468,9 +506,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -927,15 +962,16 @@
       <workItem from="1485086781312" duration="35511000" />
       <workItem from="1485266267931" duration="2353000" />
       <workItem from="1486765112936" duration="749000" />
-      <workItem from="1487090852610" duration="16742000" />
+      <workItem from="1487090852610" duration="17008000" />
+      <workItem from="1488287077821" duration="5517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55428000" />
+    <option name="totallyTimeSpent" value="61211000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="830" extended-state="6" />
+    <frame x="524" y="22" width="1396" height="1002" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -950,10 +986,10 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23962805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24741507" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12804006" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13589364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -999,13 +1035,63 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lab1v6_beta/lab1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9915">
+          <caret line="661" column="40" selection-start-line="661" selection-start-column="40" selection-end-line="661" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#32015#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
+            <element signature="e#4223#4224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2580">
+          <caret line="200" column="18" selection-start-line="200" selection-start-column="18" selection-end-line="200" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatNotification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServerInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="42" column="58" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#1731#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#30129#0" expanded="true" />
+            <element signature="e#0#32015#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
+            <element signature="e#4223#4224#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1015,7 +1101,7 @@
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1042,7 +1128,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="32" column="59" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
-          <folding />
+          <folding>
+            <element signature="e#0#1731#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,8 +1140,10 @@
         <state relative-caret-position="2610">
           <caret line="205" column="23" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
           <folding>
-            <element signature="e#0#30129#0" expanded="true" />
+            <element signature="e#0#32015#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
+            <element signature="e#4223#4224#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1062,7 +1153,7 @@
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1089,7 +1180,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#1731#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1098,8 +1192,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#30129#0" expanded="true" />
+            <element signature="e#0#32015#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
+            <element signature="e#4223#4224#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1109,7 +1205,7 @@
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1136,7 +1232,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="32" column="59" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
-          <folding />
+          <folding>
+            <element signature="e#0#1731#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1161,8 +1260,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#30129#0" expanded="true" />
+            <element signature="e#0#32015#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
+            <element signature="e#4223#4224#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1217,14 +1318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/lab1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-465">
@@ -1232,20 +1325,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatAFK.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-225">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServerInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="42" column="58" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#1731#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1v6_beta/lab1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-235">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2580">
+          <caret line="200" column="18" selection-start-line="200" selection-start-column="18" selection-end-line="200" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatAFK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1260,38 +1380,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServerInterface.java">
+    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="42" column="58" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab1v6_beta/lab1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+        <state relative-caret-position="315">
+          <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/client/ChatClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8786">
-          <caret line="661" column="40" selection-start-line="661" selection-start-column="40" selection-end-line="661" selection-end-column="40" />
+        <state relative-caret-position="405">
+          <caret line="141" column="31" selection-start-line="141" selection-start-column="31" selection-end-line="141" selection-end-column="31" />
           <folding>
-            <element signature="e#0#30129#0" expanded="true" />
+            <element signature="e#0#32015#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
+            <element signature="e#4223#4224#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab1v6_beta/chat/develop/src/dsv/pis/chat/server/ChatServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="948">
-          <caret line="200" column="18" selection-start-line="200" selection-start-column="18" selection-end-line="200" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -1,4 +1,9 @@
 package dsv.pis.chat.client;
+
+import java.util.Timer;
+
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
@@ -9,22 +14,15 @@ import java.util.concurrent.ScheduledFuture;
  * Created by emillehti on 2017-01-22.
  */
 public class ChatAFK {
-
-    private final ScheduledExecutorService controller = Executors.newScheduledThreadPool(1);
-    //private String name;
-
-    public void checkAFK(){
-        /*final Runnable checker = new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("Sry guys afk");
-            }
-        };
-
-        final ScheduledFuture<?> afkHandle = controller.schedule(checker, 20, java.util.concurrent.TimeUnit.SECONDS);
-        controller.schedule(new Runnable(){
-            public void run() {afkHandle.cancel(true); }
-        }, 20, java.util.concurrent.TimeUnit.SECONDS);*/
+    /*Timer afkTimer;
+    public ChatAFK(int seconds, ChatServerInterface chatServerInterface, String myName){
+        afkTimer = new Timer();
+        afkTimer.schedule(new afkNotify(), seconds * 1000;);
     }
+    class afkNotify extends TimerTask{
+        @Override
+        public void run() {
 
+        }
+    }*/
 }

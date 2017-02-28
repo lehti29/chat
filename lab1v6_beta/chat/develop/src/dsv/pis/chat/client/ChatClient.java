@@ -13,10 +13,8 @@ import java.awt.*;
 import java.io.*;
 import java.lang.*;
 import java.rmi.*;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.Random;
-import java.util.Vector;
+import java.util.*;
+import java.util.Timer;
 
 
 // Jini
@@ -104,6 +102,9 @@ public class ChatClient
 
     protected int myLastMsg = 0;
     protected boolean showMine = false;
+    //afkClass afk;
+    int seconds = 10;
+    protected Timer afkTimer;
     /**
      * Creates a new ChatClient instance.
      */
@@ -113,9 +114,6 @@ public class ChatClient
             java.lang.ClassNotFoundException,
             java.rmi.RemoteException
     {
-        //cg = new ChatGUI();
-        //cg.init();
-
         // Create a service template so the lookup cache will have something
         // to use for matching found services. There are three ways of matching
         // against a service; the service id, an array of service types
@@ -137,7 +135,32 @@ public class ChatClient
         // ServiceDiscoveryListener (which we implement below).
         luc = sdm.createLookupCache (chatServiceTemplate, null, this);
 
+        //afk = new afkClass(10, myServer, myName);
     }
+
+    public void startTimer(){
+        afkTimer = new Timer();
+        afkTimer.schedule(new afkNotify(), seconds * 1000);
+    }
+    public void cancelTimer(){
+        afkTimer.cancel();
+    }
+
+    private class afkNotify extends TimerTask{
+        @Override
+        public void run() {
+            if (myServer != null) {
+                try {
+                    myServer.say (myName + " is sadly afk...");
+                }
+                catch (java.rmi.RemoteException rex) {
+                    System.out.println ("[Sending afk message to server failed]");
+                }
+                afkTimer.cancel();
+            }
+        }
+    }
+
 
     // The next three methods, serviceAdded, serviceChanged and serviceRemoved,
     // can be called at any time by the lookup cache object. It will execute
@@ -146,7 +169,6 @@ public class ChatClient
     // news, it reports in.
 
     // In interface ServiceDiscoveryListener
-
     /**
      * The lookup cache calls this method when it has found a new service.
      * @param e The discovery event.
@@ -228,6 +250,7 @@ public class ChatClient
      */
     public void disconnect (ChatServerInterface server)
     {
+        cancelTimer(); //cancel timer when we disconnect
         if (server != null) {
             try {
                 String serverName = server.getName ();
@@ -330,7 +353,6 @@ public class ChatClient
                     }
                 }
 
-
                 if (accept) {
                     ChatServerInterface newServer = null;
                     System.out.print ("[Connecting to " + serverName + "...");
@@ -349,6 +371,8 @@ public class ChatClient
                         if (myServer != null) {
                             disconnect (myServer);
                         }
+                        //Start afk timer when we connect to a new chat
+                        startTimer();
                         myServer = newServer;
                         return i;
                     }
@@ -397,6 +421,9 @@ public class ChatClient
      * @param text  The text to send to the currently connected server.
      */
     public void sendToChat(String text) {
+        //When we send a chat, we are not longer afk. So restart afk timer
+        cancelTimer();
+        startTimer();
         if (myServer != null) {
             try {
                 myLastMsg = myServer.say (text);
@@ -856,6 +883,40 @@ public class ChatClient
             e.printStackTrace();
         }
     }
-
 }
+/*
+class afkClass {
+    Timer afkTimer;
+    ChatServerInterface myServer;
+    String myName;
+    int seconds;
+
+    public afkClass(int seconds, ChatServerInterface myServer, String myName){
+        this.myServer = myServer;
+        this.myName = myName;
+        this.seconds = seconds;
+    }
+    public void startTimer(){
+        afkTimer = new Timer();
+        afkTimer.schedule(new afkNotify(), seconds * 1000);
+    }
+    public void cancelTimer(){
+        afkTimer.cancel();
+    }
+
+    private class afkNotify extends TimerTask{
+        @Override
+        public void run() {
+            if (myServer != null) {
+                try {
+                    myServer.say (myName + " is sadly afk...");
+                }
+                catch (java.rmi.RemoteException rex) {
+                    System.out.println ("[Sending afk message to server failed]");
+                }
+                afkTimer.cancel();
+            }
+        }
+    }
+}*/
 
