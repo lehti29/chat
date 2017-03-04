@@ -26,6 +26,9 @@ public interface ChatServerInterface
   public int say (String msg)
     throws java.rmi.RemoteException;
 
+  public void sayAFK(String msg)
+    throws java.rmi.RemoteException;
+
   /**
    * Returns the server's user-friendly name.
    * @return The server's user-friendly name.

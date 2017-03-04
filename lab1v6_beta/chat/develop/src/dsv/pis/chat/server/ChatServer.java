@@ -57,6 +57,8 @@ public class ChatServer
      */
     protected LinkedList msgQueue = new LinkedList ();
 
+    protected LinkedList afkQueue = new LinkedList();
+
     /**
      * The notification objects of registered clients are held in this
      * vector.
@@ -153,6 +155,12 @@ public class ChatServer
         wakeUp ();
         return msgCount;
     }
+    protected synchronized void addAFK (String msg) {
+        afkQueue.addLast (msg);
+        System.out.println (msg);
+        // Wake up the distribution thread.
+        wakeUp ();
+    }
 
     /**
      * Retrieves the oldest (first) message from the message queue.
@@ -164,6 +172,14 @@ public class ChatServer
         String rtn = null;
         try {
             rtn = (String) msgQueue.removeFirst ();
+        }
+        catch (java.util.NoSuchElementException nse) {}
+        return rtn;
+    }
+    protected synchronized String getNextAFK () {
+        String rtn = null;
+        try {
+            rtn = (String) afkQueue.removeFirst ();
         }
         catch (java.util.NoSuchElementException nse) {}
         return rtn;
@@ -199,6 +215,12 @@ public class ChatServer
             return addMessage (msg);
         }
         return -1;
+    }
+    public void sayAFK (String msg) throws java.rmi.RemoteException
+    {
+        if (msg != null) {
+            addAFK (msg);
+        }
     }
 
     // In interface ChatServerInterface
@@ -284,7 +306,23 @@ public class ChatServer
                 }
             }
             else {
-                snooze ();
+                String afk = getNextAFK();
+                if(afk != null){
+                    // Prepare a notification
+                    ChatNotification note = new ChatNotification (this, afk, 0);
+                    // Send it to all registered listeners.
+                    for (int i = 0; i < clients.size (); i++) {
+                        try {
+                            RemoteEventListener rel =
+                                    (RemoteEventListener) clients.elementAt (i);
+                            rel.notify (note);
+                        }
+                        catch (java.lang.ArrayIndexOutOfBoundsException aio) {}
+                        catch (net.jini.core.event.UnknownEventException uee) {}
+                        catch (java.rmi.RemoteException rex) {}
+                    }
+                }
+                else snooze ();
             }
         } // while runDelivery
 

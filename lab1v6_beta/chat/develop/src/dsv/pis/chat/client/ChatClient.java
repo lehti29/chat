@@ -102,6 +102,8 @@ public class ChatClient
 
     protected int myLastMsg = 0;
     protected boolean showMine = false;
+    protected boolean afkme = true;
+    protected boolean showafk = true;
     //afkClass afk;
     int seconds = 10;
     protected Timer afkTimer;
@@ -151,7 +153,7 @@ public class ChatClient
         public void run() {
             if (myServer != null) {
                 try {
-                    myServer.say (myName + " is sadly afk...");
+                    myServer.sayAFK (myName + " is sadly afk...");
                 }
                 catch (java.rmi.RemoteException rex) {
                     System.out.println ("[Sending afk message to server failed]");
@@ -229,7 +231,13 @@ public class ChatClient
     {
         if (rev instanceof ChatNotification) {
             ChatNotification chat = (ChatNotification) rev;
-            if(chat.getSequenceNumber() != myLastMsg) { //Not mine, always show
+            if(chat.getSequenceNumber() == 0 && showafk){ //If seq nr = 0 we have afk notify
+                System.out.println (chat.getText ());
+                //playSound(2);
+                addMSG(chat.getText());
+                return; //need to stop
+            }
+            else if(chat.getSequenceNumber() != myLastMsg && chat.getSequenceNumber() != 0) { //Not mine, always show, if 0 then afknotify
                 System.out.println (chat.getSequenceNumber () + " : " + chat.getText ());
                 playSound(2);
                 addMSG(chat.getSequenceNumber() + " : " + chat.getText());
@@ -250,7 +258,7 @@ public class ChatClient
      */
     public void disconnect (ChatServerInterface server)
     {
-        cancelTimer(); //cancel timer when we disconnect
+        if (afkme) cancelTimer(); //cancel timer when we disconnect
         if (server != null) {
             try {
                 String serverName = server.getName ();
@@ -372,7 +380,7 @@ public class ChatClient
                             disconnect (myServer);
                         }
                         //Start afk timer when we connect to a new chat
-                        startTimer();
+                        if(afkme) startTimer();
                         myServer = newServer;
                         return i;
                     }
@@ -414,6 +422,19 @@ public class ChatClient
             myName = System.getProperty ("user.name");
         }
     }
+    public void setAFK(String sec){
+        if(sec.equals("true")){
+            afkme = true;
+        }
+        else if(sec.equals("false")){
+            afkme = false;
+        }
+        else{
+            seconds = Integer.parseInt(sec);
+            afkme = true;
+        }
+        System.out.println("Detect if I'm afk : " + afkme + ", afk interval: " + seconds);
+    }
 
     /**
      * This method implements the send command which is implicit in the
@@ -422,8 +443,10 @@ public class ChatClient
      */
     public void sendToChat(String text) {
         //When we send a chat, we are not longer afk. So restart afk timer
-        cancelTimer();
-        startTimer();
+        if (afkme){
+            cancelTimer();
+            startTimer();
+        }
         if (myServer != null) {
             try {
                 myLastMsg = myServer.say (text);
@@ -504,7 +527,9 @@ public class ChatClient
             "disconnect        Break the connection to the server",
             "quit              Exit the client",
             "help              Show this list",
-            "showmine           Determines wether your own messages should be displayed or not. Def: false"
+            "showmine           Determines wether your own messages should be displayed or not. Def: false",
+            "afkme <boolean> || <int>  To disable: false, to enable: true, to enable and set interval: int",
+            "showafk            Toggles if you want to be notified of users afk. Def: true"
     };
 
     /**
@@ -706,7 +731,7 @@ public class ChatClient
 
     public JScrollPane scrollPane;
     public void init(){
-        System.out.println("myName: " + myName);
+        //System.out.println("myName: " + myName);
         mainFrame = new JFrame("@Chat room");
         mainFrame.setSize(500,500);
         mainFrame.setLayout(new GridLayout(5, 5));
@@ -825,6 +850,13 @@ public class ChatClient
             else if ("showmine".startsWith (verb)) {
                 showMine = !showMine;
                 System.out.println("Showmine now: " + showMine);
+            }
+            else if("afkme".startsWith(verb)){
+                setAFK(stringJoin(argv, 1, " "));
+            }
+            else if("showafk".startsWith(verb)){
+                showafk = !showafk;
+                System.out.println("Showafk now: " + showafk);
             }
             else {
                 System.out.println ("[" + verb + ": unknown command]");
