@@ -137,7 +137,6 @@ public class ChatClient
         // ServiceDiscoveryListener (which we implement below).
         luc = sdm.createLookupCache (chatServiceTemplate, null, this);
 
-        //afk = new afkClass(10, myServer, myName);
     }
 
     public void startTimer(){
@@ -235,7 +234,6 @@ public class ChatClient
                 System.out.println (chat.getText ());
                 //playSound(2);
                 addMSG(chat.getText());
-                return; //need to stop
             }
             else if(chat.getSequenceNumber() != myLastMsg && chat.getSequenceNumber() != 0) { //Not mine, always show, if 0 then afknotify
                 System.out.println (chat.getSequenceNumber () + " : " + chat.getText ());
@@ -605,84 +603,7 @@ public class ChatClient
             // Trim away leading and trailing space from the raw input.
             //HERE CALL FUNCTION
             handleNewMsg(buf);
-            /*String arg = buf.trim ();
 
-            // Check if the input starts with a period.
-
-            if (arg.startsWith (".")) {
-
-                // Get a reference to the other side of the leading period.
-                String cmd = arg.substring (1);
-
-                // Split the string into fragments, separated by whitespace.
-                String [] cmdv = cmd.split ("\\s");
-
-                // Unfortunately enough, the split method does not collapse
-                // consecutive whitespace, but regards them as separators of
-                // empty strings. So we need to get rid of those.
-                ArrayList realWords = new ArrayList ();
-
-                // Iterate over the output of the split and add any non-empty
-                // string to the realWords arraylist.
-                for (int i = 0; i < cmdv.length; i++) {
-                    if (0 < cmdv[i].length ()) {
-                        realWords.add (cmdv[i]);
-                    }
-                }
-
-                // Then recompose the real words into a string array again.
-                // (This is not strictly necessary; we could work with the
-                // arrayList below, but when the problem was detected the
-                // code was already written in terms of a string array.)
-                String [] argv =
-                        (String []) realWords.toArray (new String [realWords.size ()]);
-
-                // We treat the first word as a command verb and makes it lowercase
-                // for easier matching.
-                String verb = argv[0].toLowerCase ();
-
-                // We will accept any leading abbreviation and this is fine while
-                // the number of commands is so small that their first character
-                // is sufficiently distinctive.
-
-                if ("quit".startsWith (verb)) {
-                    System.out.println("quit");
-                    halted = true;
-                }
-                else if ("connect".startsWith (verb)) {
-                    connectToChat (stringJoin (argv, 1, " "));
-                }
-                else if ("disconnect".startsWith (verb)) {
-                    userDisconnect ();
-                }
-                else if ("list".startsWith (verb)) {
-                    listServers (false);
-                }
-                else if ("purge".startsWith (verb)) {
-                    listServers (true);
-                }
-                else if ("name".startsWith (verb)) {
-                    setName (stringJoin (argv, 1, " "));
-                }
-                else if ("help".startsWith (verb)) {
-                    showHelp (argv);
-                }
-                else {
-                    System.out.println ("[" + verb + ": unknown command]");
-                }
-            }
-            else if (0 < arg.length ()) {
-                if (myServer != null) {
-                    if (myName == null) {
-                        setName (myName);
-                    }
-                    sendToChat (myName + ": " + arg);
-                }
-                else {
-                    System.out.println ("[Client is not connected!]");
-                }
-
-            }*/
         } // while not halted
 
         System.out.println ("[Quitting, please wait...]");
@@ -692,11 +613,7 @@ public class ChatClient
 
         sdm.terminate ();
     }
-/*
-  public void afkHandler(){
-      ChatAFK cafk = new ChatAFK(this.myName);
-  }
-*/
+
     // The main method.
 
     public static void main (String [] argv)
@@ -881,20 +798,20 @@ public class ChatClient
     }
     //add a message to the label. Add linebreak between every msg
     static void addMSG(String msg){
-        String current2 = formatString(showMsgTextArea.getText());
+        //String current2 = formatString(showMsgTextArea.getText());
         //showMsgTextArea.setText("<html>" + current2 + "<br>" + msg + "</html>");
         showMsgTextArea.append(msg + "\n");
 
     }
     //Substring away the html parts
-    public static String formatString(String str){
+    /*public static String formatString(String str){
         if (str.length() > 0){
             return(str.substring(6, str.length() - 6));
         }
         else {
             return "";
         }
-    }
+    }*/
     public void playSound(int choice){
         try {
             String path = "";
@@ -916,39 +833,5 @@ public class ChatClient
         }
     }
 }
-/*
-class afkClass {
-    Timer afkTimer;
-    ChatServerInterface myServer;
-    String myName;
-    int seconds;
 
-    public afkClass(int seconds, ChatServerInterface myServer, String myName){
-        this.myServer = myServer;
-        this.myName = myName;
-        this.seconds = seconds;
-    }
-    public void startTimer(){
-        afkTimer = new Timer();
-        afkTimer.schedule(new afkNotify(), seconds * 1000);
-    }
-    public void cancelTimer(){
-        afkTimer.cancel();
-    }
-
-    private class afkNotify extends TimerTask{
-        @Override
-        public void run() {
-            if (myServer != null) {
-                try {
-                    myServer.say (myName + " is sadly afk...");
-                }
-                catch (java.rmi.RemoteException rex) {
-                    System.out.println ("[Sending afk message to server failed]");
-                }
-                afkTimer.cancel();
-            }
-        }
-    }
-}*/
 
